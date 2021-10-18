@@ -1,5 +1,3 @@
-import random
-
 import pygame
 from pygame.locals import *
 
@@ -15,8 +13,6 @@ pygame.display.set_caption("Snake")
 clock = pygame.time.Clock()
 
 snake = Snake()
-
-# apple properties
 apple = Apple()
 
 while True:
@@ -43,10 +39,11 @@ while True:
         apple = Apple()
         snake.add_tail()
 
-    # "cleans" the screen
+    # "cleans" the screen in order to erase snake's old position
     screen.fill((0, 0, 0))
 
-    # printing apple
+    # "printing" apple
+    # it's necessary to print it in every iteration in order to don't be erase due "screen.fill"
     screen.blit(apple.body, apple.position)
 
     # "printing" the snake_body for each snake_position
