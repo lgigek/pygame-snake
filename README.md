@@ -4,7 +4,6 @@ A pygame lab with a simple snake game.
 
 ## TO-DOs
 There are some TO-DOs, related to the game features:
-- prevent snake change position to opposite direction (from right to left);
 - collisions that may cause game over (snake head with other body parts and screen's boundaries);
 
 And others related to improve code architecture (comments, methods, modules, etc).
