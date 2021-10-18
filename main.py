@@ -3,24 +3,10 @@ import random
 import pygame
 from pygame.locals import *
 
-
-def on_grid_random():
-    # random.randint(0, 590) -> 438
-    # 438//10 -> 43
-    # 43 * 10 -> 430
-    # 438 -> 430
-
-    x = random.randint(0, 590) // 10 * 10
-    y = random.randint(0, 590) // 10 * 10
-
-    return x, y
-
-
-def have_collided(cell_1, cell_2):
-    return (cell_1[0] == cell_2[0]) and (cell_1[1] == cell_2[1])
-
-
 # pygame stuff
+from src.utils import generate_random_position
+from src.utils import have_collided
+
 pygame.init()
 screen = pygame.display.set_mode((600, 600))
 pygame.display.set_caption("Snake")
@@ -39,7 +25,7 @@ snake_body.fill((255, 255, 255))  # setting a color to snake_body
 snake_direction = RIGHT  # setting a default direction
 
 # apple properties
-apple_position = on_grid_random()
+apple_position = generate_random_position()
 apple = pygame.Surface((10, 10))
 apple.fill((255, 0, 0))
 
@@ -72,7 +58,7 @@ while True:
 
     # checking if snake's head and apple have collided
     if have_collided(snake_position[0], apple_position):
-        apple_position = on_grid_random()  # generates a new apple
+        apple_position = generate_random_position()  # generates a new apple
         snake_position.append((0, 0))  # increase snake
 
     # makes the snake move forward
