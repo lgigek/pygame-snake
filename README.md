@@ -5,6 +5,8 @@ A pygame lab with a simple snake game.
 ## TO-DOs
 There are some TO-DOs, related to the game features:
 - collisions that may cause game over (snake head with other body parts and screen's boundaries);
+- refactor main module to improve readability;
+- some unit tests to guarantee snake and game's logic;
 
 And others related to improve code architecture (comments, methods, modules, etc).
 
