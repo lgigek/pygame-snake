@@ -10,9 +10,6 @@ pygame = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 
-[tool.poetry.scripts]
-start-game = ""
-
 [tool.black]
 line-length = 120
 target_version = ['py39']

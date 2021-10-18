@@ -24,12 +24,12 @@ pyenv activate pygame-snake-3.9.0
 
 Install necessary dependencies (needed just once): 
 ```
-./ setup.sh
+./setup.sh
 ```
 
 Finally, run the game: 
 ```
-python main
+python main.py
 ```
 
 ## References
